@@ -1,49 +1,47 @@
+let books = [];
+
+function getInput() {
+  const book = {};
+  book.title = document.getElementById('title').value;
+  book.author = document.getElementById('author').value;
+  return book;
+}
+
+function removeBook(title) {
+  const book = document.getElementById(title);
+  book.remove();
+  library = library.filter((bookObj) => bookObj.title !== title);
+  localStorage.setItem('library', JSON.stringify(library));
+}
+
+function addBook(bookObj) {
+  const bookList = document.getElementById('book-list');
+  const book = document.createElement('LI');
+  book.setAttribute('id', bookObj.title);
+  book.innerHTML = `<p> ${bookObj.title} </p> <p>${bookObj.author} </p>`;
+  const removebtn = document.createElement('button');
+  removebtn.innerHTML = 'Remove';
+  removebtn.addEventListener('click', () => removeBook(bookObj.title));
+  book.appendChild(removebtn);
+  bookList.appendChild(book);
+}
+
+const addButton = document.querySelector('.add');
+addButton.addEventListener('click', () => {
+  const book = getInput();
+  library.push(book);
+  localStorage.setItem('library', JSON.stringify(library));
+  addBook(book);
+});
+
 window.onload = () => {
-  bookSec=document.querySelector('.Books');
-  remove=document.querySelector('.remove');
-  const books = [];
-
-  function Book(title, author) {
-    this.title = title;
-    this.author = author;
+  library = JSON.parse(localStorage.getItem('library' || '[]'));
+  if (library === null) {
+    library = [];
+    return;
   }
 
-  /* let form =  document.querySelector('.form')
-
-  const storageName = 'inputFormDetails';
-
-  const currentStorage = JSON.parse(window.localStorage.getItem(storageName));
-
-  if (currentStorage) {
-    form.title.value = currentStorage.title;
-  }
-
-  form.addEventListener('input', () => {
-    const newData = {
-    title: form.title.value,
-    author: form.author.value
-  };
-
-  window.localStorage.setItem(storageName, JSON.stringify(newData));
-  }); */
-  let counter = 0;
-  const addBtn = document.querySelector('.add');
-  addBtn.addEventListener('click', () => {
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const addBook = new Book(title, author);
-    books.push(addBook);
-    popBook(counter);
-    counter++;
+  library.forEach((book) => {
+    addBook(book);
   });
-
-  function popBook(counter){
-    const eachBook = `<div class="mybook">
-    <p>"${books[counter].title}"</p>
-    <p>"${books[counter].author}"</p>
-    <button type="button" class = "remove">Remove</button>
-    <hr>`;
-    bookSec.insertAdjacentHTML('beforeend', eachBook);
-    
-  }
 };

@@ -1,3 +1,7 @@
 .AddingBook {
   margin-top: 2rem;
 }
+
+#book-list {
+  list-style: none;
+}
