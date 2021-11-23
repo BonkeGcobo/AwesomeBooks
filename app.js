@@ -15,7 +15,7 @@ function removeBook(title) {
 }
 
 function addBook(bookObj) {
-  const bookList = document.getElementById('book-list');
+  const bookList = document.getElementById('listBook');
   const book = document.createElement('LI');
   book.setAttribute('id', bookObj.title);
   book.innerHTML = `<p> ${bookObj.title} </p> <p>${bookObj.author} </p>`;
@@ -26,7 +26,7 @@ function addBook(bookObj) {
   bookList.appendChild(book);
 }
 
-const addButton = document.querySelector('.add');
+const addButton = document.querySelector('.addbook');
 addButton.addEventListener('click', () => {
   const book = getInput();
   library.push(book);
