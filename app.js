@@ -7,8 +7,8 @@ function getInput() {
   return book;
 }
 
-function removeBook(title) {
-  const book = document.getElementById(title);
+function removeBook(date) {
+  const book = document.getElementById(date);
   book.remove();
   library = library.filter((bookObj) => bookObj.title !== title);
   localStorage.setItem('library', JSON.stringify(library));
@@ -17,11 +17,13 @@ function removeBook(title) {
 function addBook(bookObj) {
   const bookList = document.getElementById('book-list');
   const book = document.createElement('LI');
-  book.setAttribute('id', bookObj.title);
+  const date = new Date();
+  console.log(date);
+  book.setAttribute('id', date);
   book.innerHTML = `<p> ${bookObj.title} </p> <p>${bookObj.author} </p>`;
   const removebtn = document.createElement('button');
   removebtn.innerHTML = 'Remove';
-  removebtn.addEventListener('click', () => removeBook(bookObj.title));
+  removebtn.addEventListener('click', () => removeBook(date));
   book.appendChild(removebtn);
   bookList.appendChild(book);
 }
