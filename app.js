@@ -17,7 +17,7 @@ function removeBook(id) {
 }
 
 function addBook(bookObj) {
-  counter++;
+  counter = +1;
   const bookList = document.getElementById('listBook');
   const books = document.createElement('li');
   books.setAttribute('id', bookObj.id);
