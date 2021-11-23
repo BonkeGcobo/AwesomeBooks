@@ -1,4 +1,4 @@
-let books = [];
+let library = [];
 
 function getInput() {
   const book = {};
