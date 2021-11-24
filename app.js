@@ -16,8 +16,9 @@ function removeBook(id) {
   localStorage.setItem('library', JSON.stringify(library));
 }
 
+
 function addBook(bookObj) {
-  counter = +1;
+  counter++;
   const bookList = document.getElementById('listBook');
   const books = document.createElement('li');
   books.setAttribute('id', bookObj.id);
