@@ -32,8 +32,7 @@ class Library {
   displayBooks() {
     bookSec.innerHTML = '';
     this.books.forEach((book) => {
-      const eachBook = 
-      `<div class="Book">
+      const eachBook = `<div class="Book">
         <h4 class="aboutBook"> "${book.title}" by ${book.author}</h4>
         <button type="button" data-id="${book.id}" class="removebtn">Remove</button>
       </div>
