@@ -69,3 +69,8 @@ input {
   justify-content: flex-end;
   margin-right: 2rem;
 }
+
+.item {
+  border-right: 1px solid grey;
+  padding-right: 0.25rem;
+}
