@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This app takes in a list of books and then display them in a html page.
 
 ## Built With
 
