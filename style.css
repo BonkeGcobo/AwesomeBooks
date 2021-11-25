@@ -9,11 +9,22 @@
 .Book {
   display: flex;
   justify-content: space-between;
-  /*border: 1px solid green;*/
   align-items: center;
   margin-bottom: 1rem;
 }
 
 .bookLine {
   margin-top: -1rem;
+}
+
+body {
+  text-align: center;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+.addBook {
+  margin-left: 1rem;
 }
