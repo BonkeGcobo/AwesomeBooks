@@ -48,7 +48,7 @@ class Library {
     });
   }
 }
-localStorage.clear();
+
 const Lib = new Library();
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -57,3 +57,6 @@ addBtn.addEventListener('click', (e) => {
   Lib.add(name, writer);
 });
 
+if(Lib.books!==null){
+  Lib.displayBooks();
+}
