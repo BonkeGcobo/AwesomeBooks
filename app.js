@@ -57,6 +57,6 @@ addBtn.addEventListener('click', (e) => {
   Lib.add(name, writer);
 });
 
-if(Lib.books!==null){
+if (Lib.books !== null) {
   Lib.displayBooks();
 }
