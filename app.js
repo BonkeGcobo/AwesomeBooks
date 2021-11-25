@@ -32,13 +32,13 @@ class Library {
   displayBooks() {
     bookSec.innerHTML = '';
     this.books.forEach((book) => {
-      const eachBook = `<div class="book ${book.id}">
-        <h3>${book.title}</h3>
-        <h3>${book.author}</h3>
-
+      const eachBook = 
+      `<div class="Book">
+        <h4 class="aboutBook"> "${book.title}" by ${book.author}</h4>
         <button type="button" data-id="${book.id}" class="removebtn">Remove</button>
-        <hr>
-     </div>`;
+      </div>
+      <hr class="bookLine">`;
+
       bookSec.insertAdjacentHTML('beforeend', eachBook);
       document.querySelectorAll('.removebtn').forEach((btn) => {
         btn.addEventListener('click', () => {

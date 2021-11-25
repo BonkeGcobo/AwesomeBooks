@@ -5,3 +5,15 @@
 #listBook {
   list-style: none;
 }
+
+.Book {
+  display: flex;
+  justify-content: space-between;
+  /*border: 1px solid green;*/
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bookLine {
+  margin-top: -1rem;
+}
