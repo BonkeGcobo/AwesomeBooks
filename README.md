@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books
 
-> One paragraph statement about the project.
+> Adds List of Book in Library
 
 ![screenshot](./app_screenshot.png)
 
@@ -10,50 +10,27 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- VS code
 
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
+-Knowledge of JavaScript
+-HTML AND CS
 
 ### Run tests
-
-### Deployment
-
+- npx hint .
+- npx stylelint "**/*.{css,scss}"
+- npx eslint .
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Bonke**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/BonkeGcobo)
+- Twitter: [@twitterhandle](https://twitter.com/bonke_gcobo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bonke-gcobo-28a763125/)
 
 ## 🤝 Contributing
 
