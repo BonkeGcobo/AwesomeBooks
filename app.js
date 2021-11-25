@@ -1,8 +1,18 @@
+
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const addBtn = document.querySelector('.addbook');
 const bookSec = document.querySelector('.Books');
+const showBookList = document.querySelector('.List');
+const addBook = document.querySelector('.addNew');
+const conItem = document.querySelector('.toContact');
+const bookAdd = document.querySelector('.AddingBook'); 
+const BooksList = document.querySelector('.Books-list');
+const contactForm = document.querySelector('.contactForm');
+const date = document.querySelector('.theDate');
 
+var DateTime = luxon.DateTime;
+/*const { DateTime } = require("luxon");*/
 class Book {
   constructor(title, author) {
     this.id = `_${Math.random().toString(36).substr(2, 9)}`;
@@ -59,3 +69,25 @@ addBtn.addEventListener('click', (e) => {
 if (Lib.books !== null) {
   Lib.displayBooks();
 }
+
+showBookList.addEventListener('click', () =>{
+   BooksList.style.display = 'block';
+   bookAdd.style.display = 'none';
+   contactForm.style.display = 'none';
+});
+
+addBook.addEventListener('click', ()=>{
+  bookAdd.style.display =  'block';
+  BooksList.style.display = 'none';
+  contactForm.style.display = 'none';
+});
+
+conItem.addEventListener('click',()=>{
+  contactForm.style.display = 'flex';
+  bookAdd.style.display =  'none';
+  BooksList.style.display = 'none';
+});
+
+let time = DateTime.now();
+showTime=time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+date.innerHTML = showTime;

@@ -1,5 +1,6 @@
 .AddingBook {
   margin-top: 2rem;
+  text-align: center;
 }
 
 #listBook {
@@ -15,10 +16,6 @@
 
 .bookLine {
   margin-top: -1rem;
-}
-
-body {
-  text-align: center;
 }
 
 input {
@@ -37,4 +34,38 @@ input {
   display: flex;
   width: 70%;
   justify-content: flex-end;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.Books-list {
+  display: none;
+  margin-top: 2rem;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactForm {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Date {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
 }
