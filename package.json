@@ -29,6 +29,8 @@
     "stylelint-scss": "^3.21.0"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^19.0.1"
+    "eslint-config-airbnb": "^19.0.1",
+    "full-icu": "^1.4.0",
+    "luxon": "^2.1.1"
   }
 }
