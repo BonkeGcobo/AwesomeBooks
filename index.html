@@ -6,63 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="luxon.js"></script>
   <title>Awesome Book</title>
 </head>
 
 <body>
   <header>
-    <nav class="nav">
-      <h4 class="awesome">Awesome Books</h4>
-       <ul class="nav-items">
-         <li class="item List"> List</li>
-         <li class="item addNew">Add New</li>
-         <li class="item toContact">Contact</li>
-      </ul> 
-    </nav>
-    <div class="Date">
-      <p class="theDate"></p>
-    </div>
+    <h1>Awesome Books</h1>
   </header>  
    
 
-  <section class="Books-list">
-    <h1>All Awesome Books</h1>
-    <div class="Books"></div>
+  <section class="Books">
+    <ul id='listBook'></ul>
   </section>
 
-  <section class="AddingBook">
-    <h1>Add a New Book</h1>
-    <form class="form">
-      <div class="inputs">
-        <input type="text" id="title" placeholder="title" name="title">
-        <input type="text" id="author" placeholder="Author" name="author">
-      </div>
-      
 
-      <div class="btn">
-        <button type="submit" class="addbook">
-          Add
-        </button>
-      </div>
+  <section class="AddingBook">
+    <form class="form">
+      <input type="text" id="title" placeholder="title" name="title"><br>
+      <input type="text" id="author" placeholder="Author" name="author"><br>
+
+      <button type="button" class="addbook">
+        Add
+      </button>
     </form>
   </section>
 
-  <section class="contactForm">
-    <h1 class="Title">Contact Information</h1>
-    <p>Do you have any questions or you wanna just say "Hello"?<br>
-      you can reach out to us
-    </p>
-
-    <ul>
-      <li>Our email: mail@123.gmail.com</li>
-      <li>Our phone number: 03471667512</li>
-      <li>Our Address: 13 Kentucky Fried Chicken</li>
-    </ul>
-
-  </section>
-
-  <script src="app.js"></script>
-  
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
