@@ -2,7 +2,7 @@ let library = [];
 let counter = 0;
 function getInput() {
   const books = {};
-  books.id = counter;
+  books.id = Math.random().toString(36).substr(2, 9);
   books.title = document.getElementById('title').value;
   books.author = document.getElementById('author').value;
   return books;
