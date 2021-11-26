@@ -1,5 +1,4 @@
 let library = [];
-let counter = 0;
 function getInput() {
   const books = {};
   books.id = Math.random().toString(36).substr(2, 9);
@@ -11,13 +10,11 @@ function getInput() {
 function removeBook(id) {
   const books = document.getElementById(id);
   books.remove();
-  console.log(id);
   library = library.filter((bookObj) => bookObj.id !== id);
   localStorage.setItem('library', JSON.stringify(library));
 }
 
 function addBook(bookObj) {
-  counter += 1;
   const bookList = document.getElementById('listBook');
   const books = document.createElement('li');
   books.setAttribute('id', bookObj.id);
